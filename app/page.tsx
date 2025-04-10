@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { CheckCircle, Code, Zap, Sparkles, Brain, Rocket, Clock, Shield, Users, ChevronRight, Menu } from "lucide-react"
 import { Footer } from "./components/ui/footer"
+import HeroMedia from "./components/HeroMedia"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -86,7 +87,7 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-[#252A34] via-[#252A34] to-[#0D0D0D] overflow-hidden relative">
-          <div className="absolute inset-0 bg-[url('/placeholder-bg.png')] opacity-10 bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/bg.png')] opacity-10 bg-cover bg-center"></div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF2E63]/20 to-transparent"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -128,15 +129,27 @@ export default function Home() {
                 </div>
               </div>
               <div className="relative mt-8 lg:mt-0">
-                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#FF2E63] to-[#702DFF] opacity-75 blur-xl"></div>
-                <div className="relative bg-[#252A34] p-2 rounded-2xl shadow-2xl">
-                  <Image
-                    src="/placeholder-hero.png"
-                    width={550}
-                    height={550}
-                    alt="WAZA AI Technology"
-                    className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full"
-                  />
+                {/* 3D effect glow */}
+                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#FF2E63] to-[#702DFF] opacity-75 blur-xl transform rotate-2"></div>
+                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#702DFF] to-[#FF2E63] opacity-50 blur-xl -rotate-2"></div>
+                
+                {/* Main container */}
+                <div className="relative bg-[#252A34] rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-[1.02] hover:rotate-1">
+                  {/* Inner shadow for depth */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent"></div>
+                  
+                  {/* Content container */}
+                  <div className="relative p-2">
+                    <div className="aspect-square">
+                      <HeroMedia
+                        src="/hero-video.mp4"
+                        width={550}
+                        height={550}
+                        alt="WAZA AI Technology"
+                        className="rounded-xl"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -260,7 +273,7 @@ export default function Home() {
           className="w-full py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
-          <div className="absolute inset-0 bg-[url('/placeholder-bg.png')] opacity-5 bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/bg.png')] opacity-5 bg-cover bg-center"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
               <div className="space-y-2">
@@ -467,7 +480,7 @@ export default function Home() {
           id="benefits"
           className="w-full py-20 md:py-32 bg-gradient-to-br from-[#252A34] via-[#252A34] to-[#0D0D0D] text-white relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-[url('/placeholder-bg.png')] opacity-10 bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/bg.png')] opacity-10 bg-cover bg-center"></div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF2E63]/20 to-transparent"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
@@ -719,7 +732,7 @@ export default function Home() {
           className="w-full py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
-          <div className="absolute inset-0 bg-[url('/placeholder-bg.png')] opacity-5 bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/bg.png')] opacity-5 bg-cover bg-center"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
               <div className="space-y-2">
@@ -783,7 +796,7 @@ export default function Home() {
                   </div>
                   <div className="p-8">
                     <div className="flex flex-col items-center text-center space-y-4">
-                      <p className="text-4xl font-bold">$25,000</p>
+                      <p className="text-4xl font-bold">starting at $2,499</p>
                       <p className="text-sm text-muted-foreground">Validate your vision with a proof of concept</p>
                       <ul className="space-y-3 text-sm">
                         <li className="flex items-center">
@@ -930,7 +943,7 @@ export default function Home() {
           id="cta"
           className="w-full py-20 md:py-32 bg-gradient-to-br from-[#252A34] via-[#252A34] to-[#0D0D0D] text-white relative overflow-hidden"
         >
-          <div className="absolute inset-0 bg-[url('/placeholder-bg.png')] opacity-10 bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/bg.png')] opacity-10 bg-cover bg-center"></div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF2E63]/20 to-transparent"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="grid gap-10 lg:grid-cols-2 items-center">
