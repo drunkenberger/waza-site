@@ -23,14 +23,15 @@ export default function HeroMedia({ src, width, height, alt, className }: HeroMe
 
   if (isVideo) {
     return (
-      <div className="w-full h-full relative">
+      <div className="w-full h-full relative group">
         <video
           ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          className={`${className} w-full h-full`}
+          controls
+          className={`${className} w-full h-full opacity-100 group-hover:opacity-90 transition-opacity duration-200`}
           style={{
             objectFit: 'cover',
           }}

@@ -74,10 +74,35 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "vhs-r": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(2px)" }
+        },
+        "vhs-g": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-2px)" }
+        },
+        "vhs-b": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(1px)" }
+        },
+        "vhs-noise": {
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "0.6" }
+        },
+        "vhs-scan": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "vhs-r": "vhs-r 0.5s infinite",
+        "vhs-g": "vhs-g 0.5s infinite",
+        "vhs-b": "vhs-b 0.5s infinite",
+        "vhs-noise": "vhs-noise 0.2s infinite",
+        "vhs-scan": "vhs-scan 8s linear infinite"
       },
     },
   },

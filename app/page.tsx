@@ -10,13 +10,15 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { CheckCircle, Code, Zap, Sparkles, Brain, Rocket, Clock, Shield, Users, ChevronRight, Menu } from "lucide-react"
 import { Footer } from "./components/ui/footer"
 import HeroMedia from "./components/HeroMedia"
+import { ThemeToggle } from "@/components/theme-toggle"
+import { VHSEffect } from "@/components/VHSEffect"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-white to-gray-50">
-      <header className="sticky top-0 z-40 w-full border-b bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
+    <div className="flex min-h-screen flex-col bg-gradient-to-b from-background to-background/50 dark:from-background dark:to-background/50">
+      <header className="sticky top-0 z-40 w-full border-b bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
             <Link href="/" className="flex items-center space-x-2">
@@ -42,8 +44,10 @@ export default function Home() {
               <Link href="#pricing" className="text-sm font-medium transition-colors hover:text-[#FF2E63]">
                 Pricing
               </Link>
+              <ThemeToggle />
               <Button
                 asChild
+                size="sm"
                 className="bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/90 hover:from-[#FF2E63]/90 hover:to-[#FF2E63]/80 text-white shadow-md"
               >
                 <Link href="#cta">Get Started</Link>
@@ -72,6 +76,7 @@ export default function Home() {
                   <Link href="#pricing" className="text-lg font-medium transition-colors hover:text-[#FF2E63]">
                     Pricing
                   </Link>
+                  <ThemeToggle />
                   <Button
                     asChild
                     className="mt-4 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/90 hover:from-[#FF2E63]/90 hover:to-[#FF2E63]/80 text-white shadow-md"
@@ -86,98 +91,95 @@ export default function Home() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-[#252A34] via-[#252A34] to-[#0D0D0D] overflow-hidden relative">
-          <div className="absolute inset-0 bg-[url('/bg.png')] opacity-10 bg-cover bg-center"></div>
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF2E63]/20 to-transparent"></div>
-          <div className="container px-4 md:px-6 relative">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-8">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center rounded-full border border-[#FF2E63]/20 bg-[#FF2E63]/10 px-3 py-1 text-sm text-[#FF2E63]">
-                    <span>AI-Native Technology</span>
+        <section className="relative w-full min-h-screen bg-gradient-to-br from-[#252A34] via-[#252A34] to-[#0D0D0D] overflow-hidden">
+          <VHSEffect>
+            <div className="absolute inset-0 bg-[url('/bg.png')] opacity-10 bg-cover bg-center"></div>
+            <div className="container px-4 md:px-6 mx-auto py-12 md:py-24 lg:py-32 xl:py-48">
+              <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+                <div className="flex flex-col justify-center space-y-8">
+                  <div className="space-y-6">
+                    <h2 className="text-2xl font-bold tracking-tighter text-[#FF2E63] mb-2">WAZA</h2>
+                    <div className="inline-flex items-center rounded-lg border border-[#FF2E63]/20 bg-[#FF2E63]/10 px-4 py-2 text-base font-medium text-[#FF2E63]">
+                      AI-Native Product Studio
+                    </div>
+                    <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
+                      Technology That{" "}
+                      <span className="bg-gradient-to-r from-[#FF2E63] to-[#702DFF] bg-clip-text text-transparent">
+                        Grows Stronger
+                      </span>{" "}
+                      Through Use
+                    </h1>
+                    <p className="max-w-[600px] text-[#F9F7F7] md:text-xl">
+                      WAZA creates AI-native systems that continuously evolve and improve themselves over time.
+                    </p>
                   </div>
-                  <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
-                    Technology That{" "}
-                    <span className="bg-gradient-to-r from-[#FF2E63] to-[#702DFF] bg-clip-text text-transparent">
-                      Grows Stronger
-                    </span>{" "}
-                    Through Use
-                  </h1>
-                  <p className="max-w-[600px] text-[#F9F7F7] md:text-xl">
-                    WAZA creates AI-native systems that continuously evolve and improve themselves over time.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-3 min-[400px]:flex-row">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/90 hover:from-[#FF2E63]/90 hover:to-[#FF2E63]/80 text-white shadow-md"
-                  >
+                  <div className="flex flex-col gap-3 min-[400px]:flex-row">
                     <Link href="#cta" className="flex items-center">
-                      Start Your Transformation
-                      <ChevronRight className="ml-2 h-4 w-4" />
+                      <Button
+                        size="lg"
+                        className="bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/90 hover:from-[#FF2E63]/90 hover:to-[#FF2E63]/80 text-white shadow-md w-full"
+                      >
+                        Start Your Transformation
+                        <ChevronRight className="ml-2 h-4 w-4" />
+                      </Button>
                     </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="border-[#08D9D6] text-[#08D9D6] hover:bg-[#08D9D6]/10"
-                  >
-                    <Link href="#features">Explore Features</Link>
-                  </Button>
+                    <Link href="#features">
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="border-[#08D9D6] text-[#08D9D6] hover:bg-[#08D9D6]/10 w-full"
+                      >
+                        Explore Features
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-              <div className="relative mt-8 lg:mt-0">
-                {/* 3D effect glow */}
-                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#FF2E63] to-[#702DFF] opacity-75 blur-xl transform rotate-2"></div>
-                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#702DFF] to-[#FF2E63] opacity-50 blur-xl -rotate-2"></div>
-                
-                {/* Main container */}
-                <div className="relative bg-[#252A34] rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-[1.02] hover:rotate-1">
-                  {/* Inner shadow for depth */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent"></div>
+                <div className="relative mt-8 lg:mt-0">
+                  {/* 3D effect glow */}
+                  <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#FF2E63] to-[#702DFF] opacity-75 blur-xl transform rotate-2"></div>
+                  <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-[#702DFF] to-[#FF2E63] opacity-50 blur-xl -rotate-2"></div>
                   
-                  {/* Content container */}
-                  <div className="relative p-2">
-                    <div className="aspect-square">
-                      <HeroMedia
-                        src="/hero-video.mp4"
-                        width={550}
-                        height={550}
-                        alt="WAZA AI Technology"
-                        className="rounded-xl"
-                      />
+                  {/* Main container */}
+                  <div className="relative bg-[#252A34] rounded-2xl shadow-2xl transform transition-transform duration-500 hover:scale-[1.02] hover:rotate-1">
+                    {/* Inner shadow for depth */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent"></div>
+                    
+                    {/* Content container */}
+                    <div className="relative p-2">
+                      <div className="aspect-square">
+                        <HeroMedia
+                          src="/hero-video.mp4"
+                          width={550}
+                          height={550}
+                          alt="WAZA AI Technology"
+                          className="rounded-xl"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </VHSEffect>
+          {/* Section transition */}
+          <div className="absolute bottom-0 left-0 right-0">
+            <div className="h-32 bg-gradient-to-t from-white dark:from-[#0D0D0D] via-[#252A34]/50 dark:via-[#0D0D0D]/50 to-transparent"></div>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
-        {/* Problem & Solution Combined Section */}
-        <section id="solution" className="w-full py-20 md:py-32 relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
-          <div className="container px-4 md:px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                The{" "}
-                <span className="bg-gradient-to-r from-[#FF2E63] to-[#702DFF] bg-clip-text text-transparent">
-                  Problem
-                </span>{" "}
-                & Our{" "}
-                <span className="bg-gradient-to-r from-[#08D9D6] to-[#702DFF] bg-clip-text text-transparent">
-                  Solution
-                </span>
-              </h2>
-              <div className="mt-4 h-1 w-12 bg-gradient-to-r from-[#FF2E63] to-[#702DFF] mx-auto rounded-full"></div>
-            </div>
-
+        {/* Problem & Solution Section */}
+        <section className="w-full py-12 md:py-24 bg-white dark:bg-[#0D0D0D] relative">
+          <div className="absolute inset-0 bg-[url('/bg.png')] opacity-5 bg-cover bg-center"></div>
+          <div className="container px-4 md:px-6 mx-auto relative">
+            <h2 className="text-4xl font-bold tracking-tighter text-center mb-12">
+              <span className="text-[#252A34] dark:text-white">The </span>
+              <span className="text-[#FF2E63]">Problem</span>
+              <span className="text-[#252A34] dark:text-white"> & Our </span>
+              <span className="text-[#00C2FF]">Solution</span>
+            </h2>
             <div className="grid gap-12 lg:grid-cols-2">
               {/* Problem */}
-              <Card className="overflow-hidden border-0 shadow-xl transition-all duration-200 hover:shadow-2xl group">
+              <Card className="overflow-hidden border-0 shadow-xl transition-all duration-200 hover:shadow-2xl group bg-card">
                 <div className="bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/80 p-6">
                   <h3 className="text-xl font-bold text-white text-center">The Problem</h3>
                 </div>
@@ -221,7 +223,7 @@ export default function Home() {
               </Card>
 
               {/* Solution */}
-              <Card className="overflow-hidden border-0 shadow-xl transition-all duration-200 hover:shadow-2xl group">
+              <Card className="overflow-hidden border-0 shadow-xl transition-all duration-200 hover:shadow-2xl group bg-card">
                 <div className="bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/80 p-6">
                   <h3 className="text-xl font-bold text-white text-center">The WAZA Solution</h3>
                 </div>
@@ -270,9 +272,9 @@ export default function Home() {
         {/* Key Features */}
         <section
           id="features"
-          className="w-full py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+          className="w-full py-20 md:py-32 bg-gradient-to-b from-background/50 to-background relative overflow-hidden"
         >
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
           <div className="absolute inset-0 bg-[url('/bg.png')] opacity-5 bg-cover bg-center"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
@@ -289,7 +291,7 @@ export default function Home() {
             </div>
 
             <div className="mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="group relative bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/50 rounded-t-2xl"></div>
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#FF2E63]/10 text-[#FF2E63] group-hover:bg-[#FF2E63]/20 transition-colors duration-300">
                   <Brain className="h-8 w-8" />
@@ -300,7 +302,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="group relative bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/50 rounded-t-2xl"></div>
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#08D9D6]/10 text-[#08D9D6] group-hover:bg-[#08D9D6]/20 transition-colors duration-300">
                   <Code className="h-8 w-8" />
@@ -311,7 +313,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="group relative bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#702DFF] to-[#702DFF]/50 rounded-t-2xl"></div>
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#702DFF]/10 text-[#702DFF] group-hover:bg-[#702DFF]/20 transition-colors duration-300">
                   <Sparkles className="h-8 w-8" />
@@ -322,7 +324,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="group relative bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/50 rounded-t-2xl"></div>
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#FF2E63]/10 text-[#FF2E63] group-hover:bg-[#FF2E63]/20 transition-colors duration-300">
                   <Rocket className="h-8 w-8" />
@@ -331,7 +333,7 @@ export default function Home() {
                 <p className="text-muted-foreground">Cohesive digital environments with emergent capabilities.</p>
               </div>
 
-              <div className="group relative bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/50 rounded-t-2xl"></div>
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#08D9D6]/10 text-[#08D9D6] group-hover:bg-[#08D9D6]/20 transition-colors duration-300">
                   <Zap className="h-8 w-8" />
@@ -342,7 +344,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="group relative bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#702DFF] to-[#702DFF]/50 rounded-t-2xl"></div>
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#702DFF]/10 text-[#702DFF] group-hover:bg-[#702DFF]/20 transition-colors duration-300">
                   <Shield className="h-8 w-8" />
@@ -356,7 +358,7 @@ export default function Home() {
 
         {/* Business Ideology & Services Section */}
         <section className="w-full py-20 md:py-32 relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
@@ -374,7 +376,7 @@ export default function Home() {
 
             <div className="grid gap-12 lg:grid-cols-2">
               {/* Business Ideology */}
-              <Card className="overflow-hidden border-0 shadow-xl transition-all duration-200 hover:shadow-2xl group">
+              <Card className="overflow-hidden border-0 shadow-xl transition-all duration-200 hover:shadow-2xl group bg-card">
                 <div className="bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/80 p-6">
                   <h3 className="text-xl font-bold text-white text-center">Our Business Ideology</h3>
                 </div>
@@ -418,7 +420,7 @@ export default function Home() {
               </Card>
 
               {/* Services */}
-              <Card className="overflow-hidden border-0 shadow-xl transition-all duration-200 hover:shadow-2xl group">
+              <Card className="overflow-hidden border-0 shadow-xl transition-all duration-200 hover:shadow-2xl group bg-card">
                 <div className="bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/80 p-6">
                   <h3 className="text-xl font-bold text-white text-center">Our Services</h3>
                 </div>
@@ -499,70 +501,70 @@ export default function Home() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/0 opacity-0 group-hover:opacity-30 rounded-2xl blur-xl transition-all duration-300"></div>
                 <div className="relative">
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#FF2E63]/20 text-[#FF2E63]">
                     <Users className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Delightful Experiences</h3>
-                  <p className="text-[#F9F7F7]/70 mb-6">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">Delightful Experiences</h3>
+                  <p className="text-muted-foreground mb-6">
                     Engaging interfaces that anticipate needs and adapt to preferences.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="text-3xl font-bold text-[#FF2E63]">45%</div>
-                    <div className="text-xs text-[#F9F7F7]/70">Increase in User Engagement</div>
+                    <div className="text-xs text-muted-foreground">Increase in User Engagement</div>
                   </div>
                 </div>
               </div>
 
-              <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/0 opacity-0 group-hover:opacity-30 rounded-2xl blur-xl transition-all duration-300"></div>
                 <div className="relative">
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#08D9D6]/20 text-[#08D9D6]">
                     <Brain className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Human-AI Collaboration</h3>
-                  <p className="text-[#F9F7F7]/70 mb-6">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">Human-AI Collaboration</h3>
+                  <p className="text-muted-foreground mb-6">
                     Technology that amplifies human creativity while AI handles repetitive tasks.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="text-3xl font-bold text-[#08D9D6]">3x</div>
-                    <div className="text-xs text-[#F9F7F7]/70">Productivity Improvement</div>
+                    <div className="text-xs text-muted-foreground">Productivity Improvement</div>
                   </div>
                 </div>
               </div>
 
-              <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#702DFF] to-[#702DFF]/0 opacity-0 group-hover:opacity-30 rounded-2xl blur-xl transition-all duration-300"></div>
                 <div className="relative">
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#702DFF]/20 text-[#702DFF]">
                     <Rocket className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Accelerated Production</h3>
-                  <p className="text-[#F9F7F7]/70 mb-6">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">Accelerated Production</h3>
+                  <p className="text-muted-foreground mb-6">
                     Reduce development cycles while enhancing quality through our AI-native approach.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="text-3xl font-bold text-[#702DFF]">60%</div>
-                    <div className="text-xs text-[#F9F7F7]/70">Faster Development Cycles</div>
+                    <div className="text-xs text-muted-foreground">Faster Development Cycles</div>
                   </div>
                 </div>
               </div>
 
-              <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:-translate-y-1">
+              <div className="group relative bg-card rounded-2xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/0 opacity-0 group-hover:opacity-30 rounded-2xl blur-xl transition-all duration-300"></div>
                 <div className="relative">
                   <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#FF2E63]/20 text-[#FF2E63]">
                     <Shield className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Future-Proof Solutions</h3>
-                  <p className="text-[#F9F7F7]/70 mb-6">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">Future-Proof Solutions</h3>
+                  <p className="text-muted-foreground mb-6">
                     Adaptive systems that incorporate emerging capabilities as they evolve.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="text-3xl font-bold text-[#FF2E63]">30%</div>
-                    <div className="text-xs text-[#F9F7F7]/70">Reduction in Support Inquiries</div>
+                    <div className="text-xs text-muted-foreground">Reduction in Support Inquiries</div>
                   </div>
                 </div>
               </div>
@@ -571,27 +573,22 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
         </section>
 
-        {/* Social Proof */}
-        <section id="testimonials" className="w-full py-20 md:py-32 relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+        {/* Social Proof & Trusted By Section */}
+        <section className="w-full py-20 md:py-32 relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
           <div className="container px-4 md:px-6">
+            {/* Testimonials */}
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Trusted by{" "}
-                  <span className="bg-gradient-to-r from-[#FF2E63] to-[#702DFF] bg-clip-text text-transparent">
-                    Innovative Leaders
-                  </span>
-                </h2>
-                <p className="max-w-[600px] text-muted-foreground">
                   See what our clients say about their experience with WAZA
-                </p>
+                </h2>
                 <div className="mt-4 h-1 w-12 bg-gradient-to-r from-[#FF2E63] to-[#702DFF] mx-auto rounded-full"></div>
               </div>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-3">
-              <div className="group relative bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+            <div className="grid gap-8 md:grid-cols-3 mb-24">
+              <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/50 rounded-t-2xl"></div>
                 <div className="p-8">
                   <div className="flex flex-col items-center text-center space-y-4">
@@ -635,7 +632,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="group relative bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+              <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/50 rounded-t-2xl"></div>
                 <div className="p-8">
                   <div className="flex flex-col items-center text-center space-y-4">
@@ -679,7 +676,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="group relative bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+              <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#702DFF] to-[#702DFF]/50 rounded-t-2xl"></div>
                 <div className="p-8">
                   <div className="flex flex-col items-center text-center space-y-4">
@@ -723,15 +720,52 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Client Logos */}
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tighter mb-12">
+                Trusted by{" "}
+                <span className="bg-gradient-to-r from-[#FF2E63] to-[#702DFF] bg-clip-text text-transparent">
+                  Innovative Leaders
+                </span>{" "}
+                and{" "}
+                <span className="bg-gradient-to-r from-[#702DFF] to-[#08D9D6] bg-clip-text text-transparent">
+                  Brands
+                </span>
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
+                {/* Warner Music Group */}
+                <div className="relative w-48 h-24 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 flex items-center justify-center p-4">
+                  <div className="text-lg font-semibold text-muted-foreground text-center">Warner Music Group</div>
+                  {/* Add actual logo later: <Image src="/logos/wmg.svg" alt="Warner Music Group" fill className="object-contain p-4" /> */}
+                </div>
+
+                {/* Matraka Experience Marketing */}
+                <div className="relative w-48 h-24 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 flex items-center justify-center p-4">
+                  <div className="text-lg font-semibold text-muted-foreground text-center">Matraka Experience</div>
+                  {/* Add actual logo later: <Image src="/logos/matraka.svg" alt="Matraka Experience Marketing" fill className="object-contain p-4" /> */}
+                </div>
+
+                {/* Placeholder 1 */}
+                <div className="relative w-48 h-24 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 flex items-center justify-center p-4">
+                  <div className="text-base text-muted-foreground/60 text-center">Future Client Logo</div>
+                </div>
+
+                {/* Placeholder 2 */}
+                <div className="relative w-48 h-24 bg-card rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 flex items-center justify-center p-4">
+                  <div className="text-base text-muted-foreground/60 text-center">Future Client Logo</div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Pricing Section */}
         <section
           id="pricing"
-          className="w-full py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+          className="w-full py-20 md:py-32 bg-gradient-to-b from-background/50 to-background relative overflow-hidden"
         >
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
           <div className="absolute inset-0 bg-[url('/bg.png')] opacity-5 bg-cover bg-center"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
@@ -750,7 +784,7 @@ export default function Home() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-3">
-              <div className="group relative bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+              <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/0 opacity-0 group-hover:opacity-100 rounded-2xl blur-xl transition-all duration-300"></div>
                 <div className="relative bg-white rounded-2xl overflow-hidden">
                   <div className="bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/80 p-6">
@@ -785,7 +819,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="group relative bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden scale-105 z-10">
+              <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden scale-105 z-10">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/0 opacity-0 group-hover:opacity-100 rounded-2xl blur-xl transition-all duration-300"></div>
                 <div className="absolute top-0 right-0 bg-[#FF2E63] text-white px-4 py-1 text-xs font-medium rounded-bl-lg rounded-tr-lg z-20">
                   Most Popular
@@ -827,7 +861,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="group relative bg-white rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+              <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#702DFF] to-[#702DFF]/0 opacity-0 group-hover:opacity-100 rounded-2xl blur-xl transition-all duration-300"></div>
                 <div className="relative bg-white rounded-2xl overflow-hidden">
                   <div className="bg-gradient-to-r from-[#702DFF] to-[#702DFF]/80 p-6">
@@ -871,7 +905,7 @@ export default function Home() {
 
         {/* FAQ Section - Condensed */}
         <section id="faq" className="w-full py-20 md:py-32 relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
               <div className="space-y-2">

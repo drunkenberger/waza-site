@@ -7,11 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, ArrowRight, CheckCircle } from "lucide-react";
 import { Footer } from "../components/ui/footer";
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function AboutPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-white to-gray-50">
-      <header className="sticky top-0 z-40 w-full border-b bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
+    <div className="flex min-h-screen flex-col bg-gradient-to-b from-background to-background/50 dark:from-background dark:to-background/50">
+      <header className="sticky top-0 z-40 w-full border-b bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <div className="flex gap-6 md:gap-10">
             <Link href="/" className="flex items-center space-x-2">
@@ -37,6 +38,7 @@ export default function AboutPage() {
               <Link href="/#pricing" className="text-sm font-medium transition-colors hover:text-[#FF2E63]">
                 Pricing
               </Link>
+              <ThemeToggle />
               <Button
                 asChild
                 className="bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/90 hover:from-[#FF2E63]/90 hover:to-[#FF2E63]/80 text-white shadow-md"
@@ -67,6 +69,7 @@ export default function AboutPage() {
                   <Link href="/#pricing" className="text-lg font-medium transition-colors hover:text-[#FF2E63]">
                     Pricing
                   </Link>
+                  <ThemeToggle />
                   <Button
                     asChild
                     className="mt-4 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/90 hover:from-[#FF2E63]/90 hover:to-[#FF2E63]/80 text-white shadow-md"
@@ -120,10 +123,10 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-[#FF2E63] to-[#702DFF] bg-clip-text text-transparent">Our Origin Story</h2>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-foreground">
                   WAZA was born from a fundamental insight: the most powerful technology doesn't merely function—it evolves, adapts, and grows stronger through use. Founded by a diverse team of engineers, designers, and visionaries, WAZA set out to transcend the limitations of traditional development approaches that produce static, quickly outdated technologies.
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-foreground">
                   Our founders recognized that the conventional separation between technical development and creative design was producing solutions that excelled in one dimension but underperformed in others. They envisioned a fundamentally different approach—one that treats artificial intelligence not as a tool but as a true collaborator in the creative process.
                 </p>
                 <div className="pt-4">
@@ -207,14 +210,14 @@ export default function AboutPage() {
           <section className="mb-24">
             <h2 className="text-3xl font-bold mb-10 text-center bg-gradient-to-r from-[#FF2E63] to-[#702DFF] bg-clip-text text-transparent">Mission & Vision</h2>
             <div className="grid md:grid-cols-2 gap-10">
-              <div className="bg-white p-10 rounded-xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
+              <div className="bg-card p-10 rounded-xl shadow-xl border border-border transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
                 <div className="h-2 w-20 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/70 rounded-full mb-6"></div>
                 <h3 className="text-2xl font-bold mb-4 text-[#FF2E63]">Our Mission</h3>
                 <p className="text-lg leading-relaxed">
                   To transform the digital landscape by creating AI-native products that seamlessly blend technological brilliance with human creativity, pushing the boundaries of what's possible while maintaining a spirit of playfulness and craftsmanship.
                 </p>
               </div>
-              <div className="bg-white p-10 rounded-xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
+              <div className="bg-card p-10 rounded-xl shadow-xl border border-border transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
                 <div className="h-2 w-20 bg-gradient-to-r from-[#702DFF] to-[#702DFF]/70 rounded-full mb-6"></div>
                 <h3 className="text-2xl font-bold mb-4 text-[#702DFF]">Our Vision</h3>
                 <p className="text-lg leading-relaxed">
@@ -228,42 +231,42 @@ export default function AboutPage() {
           <section className="mb-24">
             <h2 className="text-3xl font-bold mb-10 text-center bg-gradient-to-r from-[#FF2E63] to-[#702DFF] bg-clip-text text-transparent">Our Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
+              <div className="bg-card p-8 rounded-xl shadow-xl border border-border transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
                 <div className="h-12 w-12 rounded-full bg-[#FF2E63]/10 flex items-center justify-center mb-6">
                   <span className="text-[#FF2E63] text-xl font-bold">TM</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#FF2E63]">Technical Mastery</h3>
                 <p className="text-lg">We pursue excellence in our craft, refining technical skill to the level of artistry. We build with precision, attention to detail, and deep understanding.</p>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
+              <div className="bg-card p-8 rounded-xl shadow-xl border border-border transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
                 <div className="h-12 w-12 rounded-full bg-[#702DFF]/10 flex items-center justify-center mb-6">
                   <span className="text-[#702DFF] text-xl font-bold">CP</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#702DFF]">Creative Playfulness</h3>
                 <p className="text-lg">We approach challenges with a spirit of exploration and joy. We believe the most innovative solutions emerge when work feels like play.</p>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
+              <div className="bg-card p-8 rounded-xl shadow-xl border border-border transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
                 <div className="h-12 w-12 rounded-full bg-[#08D9D6]/10 flex items-center justify-center mb-6">
                   <span className="text-[#08D9D6] text-xl font-bold">HC</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#08D9D6]">Human-AI Collaboration</h3>
                 <p className="text-lg">We create technology where human and artificial intelligence enhance each other, with each contributing their unique strengths to create outcomes neither could achieve alone.</p>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
+              <div className="bg-card p-8 rounded-xl shadow-xl border border-border transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
                 <div className="h-12 w-12 rounded-full bg-[#FF2E63]/10 flex items-center justify-center mb-6">
                   <span className="text-[#FF2E63] text-xl font-bold">KZ</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#FF2E63]">Kaizen</h3>
                 <p className="text-lg">We embrace continuous improvement in everything we do. Every day, every project, and every interaction is an opportunity to make small, meaningful changes that compound over time.</p>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
+              <div className="bg-card p-8 rounded-xl shadow-xl border border-border transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
                 <div className="h-12 w-12 rounded-full bg-[#702DFF]/10 flex items-center justify-center mb-6">
                   <span className="text-[#702DFF] text-xl font-bold">RI</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#702DFF]">Recursive Improvement</h3>
                 <p className="text-lg">We design systems that grow stronger through use, continuously evolving and adapting rather than becoming obsolete.</p>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-xl border border-gray-100 transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
+              <div className="bg-card p-8 rounded-xl shadow-xl border border-border transform transition-all duration-300 hover:shadow-2xl hover:translate-y-[-5px]">
                 <div className="h-12 w-12 rounded-full bg-[#08D9D6]/10 flex items-center justify-center mb-6">
                   <span className="text-[#08D9D6] text-xl font-bold">GP</span>
                 </div>
@@ -287,25 +290,25 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
               <div className="order-1 md:order-2 space-y-8">
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl">
+                <div className="bg-card p-6 rounded-xl shadow-lg border border-border transform transition-all duration-300 hover:shadow-xl">
                   <h3 className="text-2xl font-bold mb-4 text-[#FF2E63]">AI-Native Foundation</h3>
                   <p className="text-lg leading-relaxed">
                     Unlike providers that add AI capabilities to existing approaches, WAZA builds with artificial intelligence as a foundational element, enabling systems that continuously learn and adapt based on interactions.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl">
+                <div className="bg-card p-6 rounded-xl shadow-lg border border-border transform transition-all duration-300 hover:shadow-xl">
                   <h3 className="text-2xl font-bold mb-4 text-[#702DFF]">Technical-Creative Fusion</h3>
                   <p className="text-lg leading-relaxed">
                     In contrast to the industry's typical separation of technical and creative concerns, WAZA integrates these dimensions from the outset, creating solutions that are both technically excellent and emotionally engaging.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl">
+                <div className="bg-card p-6 rounded-xl shadow-lg border border-border transform transition-all duration-300 hover:shadow-xl">
                   <h3 className="text-2xl font-bold mb-4 text-[#08D9D6]">Self-Recursive Improvement</h3>
                   <p className="text-lg leading-relaxed">
                     While conventional solutions require ongoing maintenance and eventual replacement, WAZA creates systems designed to improve themselves, delivering increasing value over time rather than depreciation.
                   </p>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl">
+                <div className="bg-card p-6 rounded-xl shadow-lg border border-border transform transition-all duration-300 hover:shadow-xl">
                   <h3 className="text-2xl font-bold mb-4 text-[#FF2E63]">Ecosystem Thinking</h3>
                   <p className="text-lg leading-relaxed">
                     Instead of building isolated products or features, WAZA develops cohesive digital ecosystems—solutions designed as platforms rather than fixed products, with components that interact to create emergent capabilities.
