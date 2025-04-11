@@ -13,9 +13,32 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 // - tacos-nearme-preview.svg: Replace with screenshot of the taco finder interface or Taco Defense game
 // - san-luis-way-preview.svg: Replace with screenshot of the city guide or service provider directory
 // - sobrecitos-preview.svg: Replace with screenshot of the platform's main interface
+// - virality-simulator-preview.svg: Replace with screenshot of the simulator interface
 const projects = [
   {
     id: 1,
+    title: "Virality Simulator",
+    description: "An innovative platform that simulates and predicts viral content performance across social media networks. Using advanced AI models, it helps creators and marketers understand the dynamics of content virality and optimize their strategies for maximum impact.",
+    image: "/virality-simulator-preview.svg",
+    tags: ["AI Analytics", "Content Strategy", "Social Media"],
+    link: "https://viralitysimulator.com",
+    aiFeatures: [
+      {
+        title: "Viral Pattern Recognition",
+        description: "AI-powered analysis of viral content patterns and success factors"
+      },
+      {
+        title: "Performance Prediction",
+        description: "Advanced modeling to predict content performance across platforms"
+      },
+      {
+        title: "Strategy Optimization",
+        description: "AI-driven recommendations for content strategy improvement"
+      }
+    ]
+  },
+  {
+    id: 2,
     title: "TacosNearMe.net",
     description: "A community-driven platform helping users discover the best taquerias worldwide. Features include a unique arcade game 'Taco Defense Challenge' with real taco prizes, comprehensive city guides, and an engaged community of taco enthusiasts.",
     image: "/tacos-nearme-preview.svg",
@@ -37,7 +60,7 @@ const projects = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "San Luis Way",
     description: "A comprehensive digital platform connecting expatriates and locals in San Luis Potosí. The platform offers curated recommendations, cultural guides, and a trusted network of service providers to help people navigate and integrate into the city's vibrant community.",
     image: "/san-luis-way-preview.svg",
@@ -59,7 +82,7 @@ const projects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Sobrecitos.net",
     description: "An innovative digital platform focused on enhancing user experiences through AI-powered solutions. The platform demonstrates WAZA's capability to create adaptive, self-improving systems.",
     image: "/sobrecitos-preview.svg",
