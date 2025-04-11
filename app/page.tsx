@@ -729,7 +729,7 @@ export default function Home() {
                     Future
                   </span>
                 </h2>
-                <p className="max-w-[600px] text-muted-foreground">
+                <p className="max-w-[600px] text-foreground/80">
                   Choose the right approach for your organization's needs
                 </p>
                 <div className="mt-4 h-1 w-12 bg-gradient-to-r from-[#FF2E63] to-[#702DFF] mx-auto rounded-full"></div>
@@ -737,17 +737,18 @@ export default function Home() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-3">
-              <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+              {/* Discovery Card */}
+              <div className="group relative bg-background/80 dark:bg-background/40 backdrop-blur-sm rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden border border-border">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/0 opacity-0 group-hover:opacity-100 rounded-2xl blur-xl transition-all duration-300"></div>
-                <div className="relative bg-white rounded-2xl overflow-hidden">
+                <div className="relative bg-card dark:bg-card/80 rounded-2xl overflow-hidden">
                   <div className="bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/80 p-6">
                     <h3 className="text-xl font-bold text-white text-center">Discovery</h3>
                   </div>
                   <div className="p-8">
                     <div className="flex flex-col items-center text-center space-y-4">
-                      <p className="text-4xl font-bold">Free</p>
-                      <p className="text-sm text-muted-foreground">Explore the possibilities with WAZA</p>
-                      <ul className="space-y-3 text-sm">
+                      <p className="text-4xl font-bold text-foreground">Free</p>
+                      <p className="text-sm text-foreground/80">Explore the possibilities with WAZA</p>
+                      <ul className="space-y-3 text-sm text-foreground/80">
                         <li className="flex items-center">
                           <CheckCircle className="mr-2 h-5 w-5 text-[#08D9D6]" />
                           <span>90-minute strategic consultation</span>
@@ -772,20 +773,21 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden scale-105 z-10">
+              {/* Concept Development Card */}
+              <div className="group relative bg-background/80 dark:bg-background/40 backdrop-blur-sm rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden scale-105 z-10 border border-border">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/0 opacity-0 group-hover:opacity-100 rounded-2xl blur-xl transition-all duration-300"></div>
                 <div className="absolute top-0 right-0 bg-[#FF2E63] text-white px-4 py-1 text-xs font-medium rounded-bl-lg rounded-tr-lg z-20">
                   Most Popular
                 </div>
-                <div className="relative bg-white rounded-2xl overflow-hidden">
+                <div className="relative bg-card dark:bg-card/80 rounded-2xl overflow-hidden">
                   <div className="bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/80 p-6">
                     <h3 className="text-xl font-bold text-white text-center">Concept Development</h3>
                   </div>
                   <div className="p-8">
                     <div className="flex flex-col items-center text-center space-y-4">
-                      <p className="text-4xl font-bold">starting at $2,499</p>
-                      <p className="text-sm text-muted-foreground">Validate your vision with a proof of concept</p>
-                      <ul className="space-y-3 text-sm">
+                      <p className="text-4xl font-bold text-foreground">starting at $2,499</p>
+                      <p className="text-sm text-foreground/80">Validate your vision with a proof of concept</p>
+                      <ul className="space-y-3 text-sm text-foreground/80">
                         <li className="flex items-center">
                           <CheckCircle className="mr-2 h-5 w-5 text-[#FF2E63]" />
                           <span>2-day collaborative workshop</span>
@@ -814,17 +816,18 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
+              {/* Enterprise Card */}
+              <div className="group relative bg-background/80 dark:bg-background/40 backdrop-blur-sm rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden border border-border">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-[#702DFF] to-[#702DFF]/0 opacity-0 group-hover:opacity-100 rounded-2xl blur-xl transition-all duration-300"></div>
-                <div className="relative bg-white rounded-2xl overflow-hidden">
+                <div className="relative bg-card dark:bg-card/80 rounded-2xl overflow-hidden">
                   <div className="bg-gradient-to-r from-[#702DFF] to-[#702DFF]/80 p-6">
                     <h3 className="text-xl font-bold text-white text-center">Enterprise</h3>
                   </div>
                   <div className="p-8">
                     <div className="flex flex-col items-center text-center space-y-4">
-                      <p className="text-4xl font-bold">Custom</p>
-                      <p className="text-sm text-muted-foreground">Full transformation partnership</p>
-                      <ul className="space-y-3 text-sm">
+                      <p className="text-4xl font-bold text-foreground">Custom</p>
+                      <p className="text-sm text-foreground/80">Full transformation partnership</p>
+                      <ul className="space-y-3 text-sm text-foreground/80">
                         <li className="flex items-center">
                           <CheckCircle className="mr-2 h-5 w-5 text-[#702DFF]" />
                           <span>Comprehensive implementation strategy</span>
