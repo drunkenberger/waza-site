@@ -37,7 +37,7 @@ export default function ServicesPage() {
         <div className="container flex h-16 items-center">
           <div className="mr-4 flex">
             <Link href="/" className="mr-6 flex items-center space-x-2">
-              <span className="font-bold text-xl">WAZA</span>
+              <span className="font-black text-8xl tracking-tight text-[#FF2E63] hover:text-[#FF2E63]/90 transition-colors">WAZA</span>
             </Link>
           </div>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -78,6 +78,11 @@ export default function ServicesPage() {
                 <Button asChild className="bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/90 hover:from-[#FF2E63]/90 hover:to-[#FF2E63]/80 text-white shadow-md">
                   <Link href="#contact-form">Get Started</Link>
                 </Button>
+              </div>
+              <div className="mt-12 animate-bounce">
+                <Link href="#services" className="text-white/80 hover:text-white">
+                  <ArrowRight className="h-8 w-8 rotate-90" />
+                </Link>
               </div>
             </div>
           </div>

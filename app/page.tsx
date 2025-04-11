@@ -104,7 +104,7 @@ export default function Home() {
               <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
                 <div className="flex flex-col justify-center space-y-8">
                   <div className="space-y-6">
-                    <h2 className="text-2xl font-bold tracking-tighter text-[#FF2E63] mb-2">WAZA</h2>
+                    <h2 className="text-8xl font-black tracking-tighter text-[#FF2E63] mb-8">WAZA</h2>
                     <div className="inline-flex items-center rounded-lg border border-[#FF2E63]/20 bg-[#FF2E63]/10 px-4 py-2 text-base font-medium text-[#FF2E63]">
                       AI-Native Product Studio
                     </div>
@@ -594,19 +594,18 @@ export default function Home() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-3 mb-24">
+              {/* Sarah's Testimonial */}
               <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/50 rounded-t-2xl"></div>
                 <div className="p-8">
                   <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="relative">
+                    <div className="relative w-20 h-20">
                       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FF2E63] to-[#702DFF] rounded-full opacity-75 blur-sm"></div>
                       <div className="relative rounded-full bg-white p-1">
-                        <Image
-                          src="/placeholder-avatar.png"
-                          width={80}
-                          height={80}
+                        <img
+                          src="https://api.dicebear.com/7.x/micah/svg?seed=sarah&backgroundColor=FF2E63&mouth=laughing&eyes=eyes"
                           alt="Sarah Johnson"
-                          className="rounded-full"
+                          className="w-full h-full rounded-full"
                         />
                       </div>
                     </div>
@@ -614,43 +613,26 @@ export default function Home() {
                       <p className="font-medium">Sarah Johnson</p>
                       <p className="text-xs text-muted-foreground">CTO, TechVision Inc.</p>
                     </div>
-                    <div className="relative">
-                      <svg
-                        className="absolute top-0 left-0 transform -translate-x-6 -translate-y-8 h-16 w-16 text-gray-100 opacity-60"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.68996 8.45999C7.16054 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9166 8.45999C14.3872 8.93999 14.6242 9.55333 14.6242 10.3Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <p className="text-sm text-muted-foreground relative z-10">
-                        "WAZA transformed our digital experience from a static website to an intelligent ecosystem that
-                        continuously improves."
-                      </p>
-                    </div>
+                    <p className="text-sm text-muted-foreground relative z-10">
+                      "WAZA transformed our digital experience from a static website to an intelligent ecosystem that
+                      continuously improves."
+                    </p>
                   </div>
                 </div>
               </div>
 
+              {/* Michael's Testimonial */}
               <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/50 rounded-t-2xl"></div>
                 <div className="p-8">
                   <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="relative">
+                    <div className="relative w-20 h-20">
                       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#08D9D6] to-[#702DFF] rounded-full opacity-75 blur-sm"></div>
                       <div className="relative rounded-full bg-white p-1">
-                        <Image
-                          src="/placeholder-avatar.png"
-                          width={80}
-                          height={80}
+                        <img
+                          src="https://api.dicebear.com/7.x/micah/svg?seed=michael&backgroundColor=08D9D6&mouth=laughing&eyes=eyes"
                           alt="Michael Chen"
-                          className="rounded-full"
+                          className="w-full h-full rounded-full"
                         />
                       </div>
                     </div>
@@ -658,43 +640,25 @@ export default function Home() {
                       <p className="font-medium">Michael Chen</p>
                       <p className="text-xs text-muted-foreground">VP of Product, Innovate Solutions</p>
                     </div>
-                    <div className="relative">
-                      <svg
-                        className="absolute top-0 left-0 transform -translate-x-6 -translate-y-8 h-16 w-16 text-gray-100 opacity-60"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.68996 8.45999C7.16054 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9166 8.45999C14.3872 8.93999 14.6242 9.55333 14.6242 10.3Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <p className="text-sm text-muted-foreground relative z-10">
-                        "The self-improving nature of WAZA's technology has been a game-changer for our product
-                        development."
-                      </p>
-                    </div>
+                    <p className="text-sm text-muted-foreground relative z-10">
+                      "The self-improving nature of WAZA's technology has been a game-changer for our product development."
+                    </p>
                   </div>
                 </div>
               </div>
 
+              {/* Emily's Testimonial */}
               <div className="group relative bg-card rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#702DFF] to-[#702DFF]/50 rounded-t-2xl"></div>
                 <div className="p-8">
                   <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="relative">
+                    <div className="relative w-20 h-20">
                       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#702DFF] to-[#FF2E63] rounded-full opacity-75 blur-sm"></div>
                       <div className="relative rounded-full bg-white p-1">
-                        <Image
-                          src="/placeholder-avatar.png"
-                          width={80}
-                          height={80}
+                        <img
+                          src="https://api.dicebear.com/7.x/micah/svg?seed=emily&backgroundColor=702DFF&mouth=laughing&eyes=eyes"
                           alt="Emily Rodriguez"
-                          className="rounded-full"
+                          className="w-full h-full rounded-full"
                         />
                       </div>
                     </div>
@@ -702,26 +666,9 @@ export default function Home() {
                       <p className="font-medium">Emily Rodriguez</p>
                       <p className="text-xs text-muted-foreground">Director of Digital, Global Brands</p>
                     </div>
-                    <div className="relative">
-                      <svg
-                        className="absolute top-0 left-0 transform -translate-x-6 -translate-y-8 h-16 w-16 text-gray-100 opacity-60"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M7.39762 10.3C7.39762 11.0733 7.14888 11.7 6.6514 12.18C6.15392 12.6333 5.52552 12.86 4.76621 12.86C3.84979 12.86 3.09047 12.5533 2.48825 11.94C1.91222 11.3266 1.62421 10.4467 1.62421 9.29999C1.62421 8.07332 1.96459 6.87332 2.64535 5.69999C3.35231 4.49999 4.33418 3.55332 5.59098 2.85999L6.4943 4.25999C5.81354 4.73999 5.26369 5.27332 4.84476 5.85999C4.45201 6.44666 4.19017 7.12666 4.05926 7.89999C4.29491 7.79332 4.56983 7.73999 4.88403 7.73999C5.61716 7.73999 6.21938 7.97999 6.68996 8.45999C7.16054 8.93999 7.39762 9.55333 7.39762 10.3ZM14.6242 10.3C14.6242 11.0733 14.3755 11.7 13.878 12.18C13.3805 12.6333 12.7521 12.86 11.9928 12.86C11.0764 12.86 10.3171 12.5533 9.71484 11.94C9.13881 11.3266 8.85079 10.4467 8.85079 9.29999C8.85079 8.07332 9.19117 6.87332 9.87194 5.69999C10.5789 4.49999 11.5608 3.55332 12.8176 2.85999L13.7209 4.25999C13.0401 4.73999 12.4903 5.27332 12.0713 5.85999C11.6786 6.44666 11.4168 7.12666 11.2858 7.89999C11.5215 7.79332 11.7964 7.73999 12.1106 7.73999C12.8437 7.73999 13.446 7.97999 13.9166 8.45999C14.3872 8.93999 14.6242 9.55333 14.6242 10.3Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                      <p className="text-sm text-muted-foreground relative z-10">
-                        "Working with WAZA has completely changed how we think about technology. Their AI-native
-                        approach has given us capabilities we didn't think were possible."
-                      </p>
-                    </div>
+                    <p className="text-sm text-muted-foreground relative z-10">
+                      "Working with WAZA has completely changed how we think about technology. Their AI-native approach has given us capabilities we didn't think were possible."
+                    </p>
                   </div>
                 </div>
               </div>
