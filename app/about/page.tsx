@@ -86,7 +86,7 @@ export default function AboutPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-br from-[#252A34] via-[#252A34] to-[#0D0D0D] overflow-hidden relative">
-          <div className="absolute inset-0 bg-[url('/placeholder-bg.png')] opacity-10 bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/bg.png')] opacity-10 bg-cover bg-center"></div>
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF2E63]/20 to-transparent"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="flex flex-col items-center text-center space-y-6 max-w-3xl mx-auto">

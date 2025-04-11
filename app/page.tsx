@@ -35,6 +35,9 @@ export default function Home() {
               <Link href="/services" className="text-sm font-medium transition-colors hover:text-[#FF2E63]">
                 Services
               </Link>
+              <Link href="/projects" className="text-sm font-medium transition-colors hover:text-[#FF2E63]">
+                Projects
+              </Link>
               <Link href="/about" className="text-sm font-medium transition-colors hover:text-[#FF2E63]">
                 About
               </Link>
@@ -66,6 +69,9 @@ export default function Home() {
                   </Link>
                   <Link href="/services" className="text-lg font-medium transition-colors hover:text-[#FF2E63]">
                     Services
+                  </Link>
+                  <Link href="/projects" className="text-lg font-medium transition-colors hover:text-[#FF2E63]">
+                    Projects
                   </Link>
                   <Link href="/about" className="text-lg font-medium transition-colors hover:text-[#FF2E63]">
                     About

@@ -408,222 +408,274 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
+
+            {/* AI Fundamentals Training */}
+            <div className="group relative overflow-hidden rounded-xl border-0 bg-white shadow-xl transition-all duration-300 hover:shadow-2xl dark:bg-gray-900">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF2E63] to-[#FF2E63]/80 opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
+              <div className="p-8">
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="rounded-full bg-[#FF2E63]/10 p-4 text-[#FF2E63]">
+                    <Code className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-2xl font-bold">AI Fundamentals Training</h3>
+                </div>
+                <p className="mb-6 text-muted-foreground">
+                  A structured program designed to build a solid foundation in AI and machine learning. Perfect for technical teams and entrepreneurs looking to understand and implement AI solutions.
+                </p>
+                <div className="mb-6 space-y-4">
+                  <h4 className="font-semibold">What You Get:</h4>
+                  <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#FF2E63]" />
+                      <span>Comprehensive AI foundation course</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#FF2E63]" />
+                      <span>Theoretical knowledge and hands-on practice</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#FF2E63]" />
+                      <span>Real-world application of learning</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#FF2E63]" />
+                      <span>8 weeks of training (4 hours/week)</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex justify-end">
+                  <Button 
+                    onClick={() => openPopup('ai-fundamentals')} 
+                    className="bg-transparent text-[#FF2E63] hover:bg-[#FF2E63]/10 border border-[#FF2E63]"
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Web3 Development Training */}
+            <div className="group relative overflow-hidden rounded-xl border-0 bg-white shadow-xl transition-all duration-300 hover:shadow-2xl dark:bg-gray-900">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#702DFF] to-[#702DFF]/80 opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
+              <div className="p-8">
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="rounded-full bg-[#702DFF]/10 p-4 text-[#702DFF]">
+                    <Sparkles className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Web3 Development Training</h3>
+                </div>
+                <p className="mb-6 text-muted-foreground">
+                  An intensive course covering blockchain technology, smart contract development, and decentralized application architecture. Designed for developers and technical teams entering the Web3 space.
+                </p>
+                <div className="mb-6 space-y-4">
+                  <h4 className="font-semibold">What You Get:</h4>
+                  <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#702DFF]" />
+                      <span>Professional Web3 development program</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#702DFF]" />
+                      <span>Build real decentralized applications</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#702DFF]" />
+                      <span>Gain practical experience with Web3 technologies</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#702DFF]" />
+                      <span>10 weeks of training (6 hours/week)</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex justify-end">
+                  <Button 
+                    onClick={() => openPopup('web3-dev')} 
+                    className="bg-transparent text-[#702DFF] hover:bg-[#702DFF]/10 border border-[#702DFF]"
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* AI-Web3 Integration Training */}
+            <div className="group relative overflow-hidden rounded-xl border-0 bg-white shadow-xl transition-all duration-300 hover:shadow-2xl dark:bg-gray-900">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#08D9D6] to-[#08D9D6]/80 opacity-0 transition-opacity duration-300 group-hover:opacity-10"></div>
+              <div className="p-8">
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="rounded-full bg-[#08D9D6]/10 p-4 text-[#08D9D6]">
+                    <Brain className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-2xl font-bold">AI-Web3 Integration Training</h3>
+                </div>
+                <p className="mb-6 text-muted-foreground">
+                  A cutting-edge program teaching the integration of AI and blockchain technologies. Learn to build intelligent decentralized systems that combine the power of AI with the security and transparency of blockchain.
+                </p>
+                <div className="mb-6 space-y-4">
+                  <h4 className="font-semibold">What You Get:</h4>
+                  <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#08D9D6]" />
+                      <span>Advanced integration course</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#08D9D6]" />
+                      <span>Latest techniques for AI-powered smart contracts</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#08D9D6]" />
+                      <span>Decentralized AI models and blockchain-based ML</span>
+                    </li>
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#08D9D6]" />
+                      <span>12 weeks of training (8 hours/week)</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex justify-end">
+                  <Button 
+                    onClick={() => openPopup('ai-web3-integration')} 
+                    className="bg-transparent text-[#08D9D6] hover:bg-[#08D9D6]/10 border border-[#08D9D6]"
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Popup Modals */}
-        {activePopup && (
-          <div 
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 p-4"
-            onClick={handleBackdropClick}
-          >
-            <div 
-              className="relative max-h-[90vh] w-full max-w-3xl overflow-auto rounded-xl bg-white p-6 shadow-xl dark:bg-gray-900"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button 
-                onClick={closePopup}
-                className="absolute right-4 top-4 rounded-full p-1 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
-              >
-                <X className="h-6 w-6" />
-              </button>
-              {activePopup === 'ai-native' && (
-                <>
-                  <h3 className="mb-4 text-2xl font-bold text-[#FF2E63]">Smart Business Solutions</h3>
-                  <div className="mb-6">
-                    <h4 className="mb-2 font-semibold">How It Works:</h4>
-                    <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                      <p className="mb-4 text-muted-foreground">
-                        <strong>Example: A Smart Restaurant Helper</strong><br />
-                        Imagine a system that helps a restaurant run smoothly. It learns when the busy hours are, how much food to order, and how many staff members are needed each day. Just like a helpful manager who gets better at their job over time!
-                      </p>
-                      <p className="text-muted-foreground">
-                        The system notices patterns - like how you get more customers on rainy days when people don't want to cook, or how certain dishes are more popular during different seasons. It uses this information to help you prepare better.
-                      </p>
-                      <p className="mt-4 text-muted-foreground">
-                        <strong>Benefits You'll See:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Less food waste because you'll know exactly what to order</li>
-                          <li>• Happy customers because you're always prepared</li>
-                          <li>• Lower costs through better staff scheduling</li>
-                          <li>• More time to focus on growing your business</li>
-                        </ul>
-                      </p>
-                    </div>
+        {/* Training & Courses Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-br from-[#252A34] via-[#252A34] to-[#0D0D0D] text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/bg.png')] opacity-10 bg-cover bg-center"></div>
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF2E63]/20 to-transparent"></div>
+          <div className="container">
+            <div className="mb-12 text-center">
+              <div className="inline-flex items-center rounded-full border border-[#FF2E63]/20 bg-[#FF2E63]/10 px-3 py-1 text-sm text-[#FF2E63] mb-6">
+                Professional Development
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
+                AI & Web3 Training Programs
+              </h2>
+              <p className="mx-auto mt-4 max-w-[700px] text-gray-300 md:text-xl">
+                Empower your team with cutting-edge skills in AI and Web3 technologies through our comprehensive training programs.
+              </p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {/* AI Fundamentals Course */}
+              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-[#FF2E63]/30 hover:bg-white/10">
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="rounded-full bg-[#FF2E63]/10 p-4 text-[#FF2E63]">
+                    <Brain className="h-8 w-8" />
                   </div>
-                </>
-              )}
-              
-              {activePopup === 'custom-ai' && (
-                <>
-                  <h3 className="mb-4 text-2xl font-bold text-[#08D9D6]">Personal AI Assistants</h3>
-                  <div className="mb-6">
-                    <h4 className="mb-2 font-semibold">How It Works:</h4>
-                    <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                      <p className="mb-4 text-muted-foreground">
-                        <strong>Example: Your Smart Office Helper</strong><br />
-                        Think of having a super-smart assistant who learns exactly how you like things done. Need to schedule meetings? It knows the best times for everyone. Need to organize files? It remembers your preferred way of organizing things.
-                      </p>
-                      <p className="text-muted-foreground">
-                        Just like a great personal assistant, it gets better at helping you over time. It learns that you prefer morning meetings, always need reminders for certain tasks, and like your reports formatted in a specific way.
-                      </p>
-                      <p className="mt-4 text-muted-foreground">
-                        <strong>Benefits You'll See:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Save hours on routine tasks</li>
-                          <li>• Never miss important deadlines</li>
-                          <li>• Keep everything organized your way</li>
-                          <li>• Work smarter, not harder</li>
-                        </ul>
-                      </p>
-                    </div>
+                  <h3 className="text-2xl font-bold">AI Fundamentals</h3>
+                </div>
+                <p className="mb-6 text-gray-300">
+                  Master the foundations of artificial intelligence, machine learning, and deep learning. Perfect for teams starting their AI journey.
+                </p>
+                <ul className="mb-8 space-y-3">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#FF2E63]" />
+                    <span>Machine Learning Basics</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#FF2E63]" />
+                    <span>Neural Networks</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#FF2E63]" />
+                    <span>AI Model Development</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#FF2E63]" />
+                    <span>Practical Applications</span>
+                  </li>
+                </ul>
+                <Button 
+                  onClick={() => openPopup('ai-fundamentals')} 
+                  className="w-full bg-[#FF2E63] hover:bg-[#FF2E63]/90 text-white"
+                >
+                  Learn More
+                </Button>
+              </div>
+
+              {/* Web3 Development */}
+              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-[#702DFF]/30 hover:bg-white/10">
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="rounded-full bg-[#702DFF]/10 p-4 text-[#702DFF]">
+                    <Code className="h-8 w-8" />
                   </div>
-                </>
-              )}
-              
-              {activePopup === 'generative-ai' && (
-                <>
-                  <h3 className="mb-4 text-2xl font-bold text-[#702DFF]">Smart Content Creation</h3>
-                  <div className="mb-6">
-                    <h4 className="mb-2 font-semibold">How It Works:</h4>
-                    <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                      <p className="mb-4 text-muted-foreground">
-                        <strong>Example: Your Social Media Partner</strong><br />
-                        Imagine having a creative partner who helps you create amazing social media content. It learns your brand's voice and what your audience loves. Need a post about your new product? It suggests catchy captions and the best time to post.
-                      </p>
-                      <p className="text-muted-foreground">
-                        The system learns from what works best - maybe your followers love behind-the-scenes content on Wednesdays and product showcases on Fridays. It helps you create content that your audience will actually engage with.
-                      </p>
-                      <p className="mt-4 text-muted-foreground">
-                        <strong>Benefits You'll See:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Save time on content creation</li>
-                          <li>• Get more engagement from your audience</li>
-                          <li>• Keep your brand voice consistent</li>
-                          <li>• Never run out of content ideas</li>
-                        </ul>
-                      </p>
-                    </div>
+                  <h3 className="text-2xl font-bold">Web3 Development</h3>
+                </div>
+                <p className="mb-6 text-gray-300">
+                  Dive into blockchain technology, smart contracts, and decentralized applications. Build the future of the web.
+                </p>
+                <ul className="mb-8 space-y-3">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#702DFF]" />
+                    <span>Blockchain Fundamentals</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#702DFF]" />
+                    <span>Smart Contract Development</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#702DFF]" />
+                    <span>DApp Architecture</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#702DFF]" />
+                    <span>Web3 Integration</span>
+                  </li>
+                </ul>
+                <Button 
+                  onClick={() => openPopup('web3-dev')} 
+                  className="w-full bg-[#702DFF] hover:bg-[#702DFF]/90 text-white"
+                >
+                  Learn More
+                </Button>
+              </div>
+
+              {/* AI-Web3 Integration */}
+              <div className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:border-[#08D9D6]/30 hover:bg-white/10">
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="rounded-full bg-[#08D9D6]/10 p-4 text-[#08D9D6]">
+                    <Sparkles className="h-8 w-8" />
                   </div>
-                </>
-              )}
-              
-              {activePopup === 'digital-experience' && (
-                <>
-                  <h3 className="mb-4 text-2xl font-bold text-[#FF2E63]">Customer Experience Enhancement</h3>
-                  <div className="mb-6">
-                    <h4 className="mb-2 font-semibold">How It Works:</h4>
-                    <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                      <p className="mb-4 text-muted-foreground">
-                        <strong>Example: A Smart Online Store</strong><br />
-                        Picture an online store that remembers what each customer likes and makes shopping easier for them. When someone visits, they see products they're interested in, deals on their favorite items, and a shopping experience that feels made just for them.
-                      </p>
-                      <p className="text-muted-foreground">
-                        The system learns from how customers shop - what they like to buy, when they like to shop, and how they prefer to browse. It's like having a personal shopper who knows exactly what each customer wants.
-                      </p>
-                      <p className="mt-4 text-muted-foreground">
-                        <strong>Benefits You'll See:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Happier customers who find what they want easily</li>
-                          <li>• More sales from personalized recommendations</li>
-                          <li>• Fewer abandoned shopping carts</li>
-                          <li>• Customers who keep coming back</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                </>
-              )}
-              
-              {activePopup === 'self-recursive' && (
-                <>
-                  <h3 className="mb-4 text-2xl font-bold text-[#08D9D6]">Business Growth Tools</h3>
-                  <div className="mb-6">
-                    <h4 className="mb-2 font-semibold">How It Works:</h4>
-                    <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                      <p className="mb-4 text-muted-foreground">
-                        <strong>Example: Smart Business Advisor</strong><br />
-                        Think of having a smart business advisor who learns everything about your business and helps you make better decisions. It notices patterns in your sales, customer behavior, and operations to suggest improvements.
-                      </p>
-                      <p className="text-muted-foreground">
-                        Just like a seasoned business consultant, it gets smarter over time. It might notice that certain products sell better together, or that some marketing strategies work better than others, helping you grow your business more effectively.
-                      </p>
-                      <p className="mt-4 text-muted-foreground">
-                        <strong>Benefits You'll See:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Better business decisions based on real data</li>
-                          <li>• Increased sales through smart recommendations</li>
-                          <li>• More efficient operations</li>
-                          <li>• Continuous business improvement</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                </>
-              )}
-              
-              {activePopup === 'predictive-analytics' && (
-                <>
-                  <h3 className="mb-4 text-2xl font-bold text-[#702DFF]">Smart Business Insights</h3>
-                  <div className="mb-6">
-                    <h4 className="mb-2 font-semibold">How It Works:</h4>
-                    <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                      <p className="mb-4 text-muted-foreground">
-                        <strong>Example: Weather Forecasting for Business</strong><br />
-                        Just like how weather forecasts help you plan your day, our system helps you plan your business. It looks at your business data to predict things like busy seasons, popular products, and potential challenges before they happen.
-                      </p>
-                      <p className="text-muted-foreground">
-                        The system gets better at predictions over time, just like a weather forecaster who knows your local climate. It helps you prepare for busy times, stock up on popular items, and avoid potential problems.
-                      </p>
-                      <p className="mt-4 text-muted-foreground">
-                        <strong>Benefits You'll See:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• Better prepared for busy seasons</li>
-                          <li>• Smart inventory management</li>
-                          <li>• Fewer unexpected problems</li>
-                          <li>• More confident business planning</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                </>
-              )}
-              
-              {activePopup === 'ai-automation' && (
-                <>
-                  <h3 className="mb-4 text-2xl font-bold text-[#FF2E63]">Smart Work Automation</h3>
-                  <div className="mb-6">
-                    <h4 className="mb-2 font-semibold">How It Works:</h4>
-                    <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                      <p className="mb-4 text-muted-foreground">
-                        <strong>Example: Your Task Assistant</strong><br />
-                        Imagine having a helper that takes care of your routine tasks automatically. Like having an efficient team member who handles paperwork, sends follow-up emails, and keeps everything organized without you having to ask.
-                      </p>
-                      <p className="text-muted-foreground">
-                        The system learns your regular tasks and processes, making them happen automatically. It's like setting up dominos - once you set it up, everything falls into place smoothly and automatically.
-                      </p>
-                      <p className="mt-4 text-muted-foreground">
-                        <strong>Benefits You'll See:</strong>
-                        <ul className="mt-2 space-y-1">
-                          <li>• More time for important work</li>
-                          <li>• Fewer manual tasks to worry about</li>
-                          <li>• Reduced errors in routine work</li>
-                          <li>• Smoother business operations</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                </>
-              )}
-              
-              <div className="flex justify-end">
-                <Button onClick={closePopup} className="bg-[#FF2E63] text-white hover:bg-[#FF2E63]/90">
-                  Close
+                  <h3 className="text-2xl font-bold">AI-Web3 Integration</h3>
+                </div>
+                <p className="mb-6 text-gray-300">
+                  Learn to combine AI and blockchain technologies to create powerful, decentralized intelligent systems.
+                </p>
+                <ul className="mb-8 space-y-3">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#08D9D6]" />
+                    <span>AI in Blockchain</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#08D9D6]" />
+                    <span>Decentralized AI</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#08D9D6]" />
+                    <span>Smart Oracle Development</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-[#08D9D6]" />
+                    <span>Advanced Integration Patterns</span>
+                  </li>
+                </ul>
+                <Button 
+                  onClick={() => openPopup('ai-web3-integration')} 
+                  className="w-full bg-[#08D9D6] hover:bg-[#08D9D6]/90 text-white"
+                >
+                  Learn More
                 </Button>
               </div>
             </div>
           </div>
-        )}
+        </section>
 
         {/* Testimonials Section */}
         <section className="bg-gray-50 dark:bg-gray-900 py-16 md:py-24">
@@ -866,6 +918,159 @@ export default function ServicesPage() {
           </div>
         </div>
       </footer>
+
+      {/* Popup Modals */}
+      {activePopup && (
+        <div 
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 p-4"
+          onClick={handleBackdropClick}
+        >
+          <div 
+            className="relative max-h-[90vh] w-full max-w-3xl overflow-auto rounded-xl bg-white p-6 shadow-xl dark:bg-gray-900"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={closePopup}
+              className="absolute right-4 top-4 rounded-full p-1 text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+            >
+              <X className="h-6 w-6" />
+            </button>
+
+            {activePopup === 'ai-fundamentals' && (
+              <>
+                <h3 className="mb-4 text-2xl font-bold text-[#FF2E63]">AI Fundamentals Training</h3>
+                <div className="mb-6">
+                  <h4 className="mb-2 font-semibold">Course Details:</h4>
+                  <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
+                    <p className="mb-4 text-muted-foreground">
+                      <strong>Comprehensive AI Foundation Course</strong><br />
+                      A structured program designed to build a solid foundation in AI and machine learning. Perfect for technical teams and entrepreneurs looking to understand and implement AI solutions.
+                    </p>
+                    <p className="text-muted-foreground">
+                      The course combines theoretical knowledge with hands-on practice, ensuring participants can apply their learning to real-world scenarios immediately.
+                    </p>
+                    <p className="mt-4 text-muted-foreground">
+                      <strong>Course Modules:</strong>
+                      <ul className="mt-2 space-y-1">
+                        <li>• Introduction to Machine Learning Algorithms</li>
+                        <li>• Deep Learning and Neural Networks</li>
+                        <li>• Model Training and Evaluation</li>
+                        <li>• AI Project Implementation</li>
+                        <li>• Best Practices and Ethics in AI</li>
+                      </ul>
+                    </p>
+                    <p className="mt-4 text-muted-foreground">
+                      <strong>Duration:</strong> 8 weeks (4 hours/week)<br />
+                      <strong>Format:</strong> Online live sessions + Hands-on workshops<br />
+                      <strong>Prerequisites:</strong> Basic programming knowledge
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {activePopup === 'web3-dev' && (
+              <>
+                <h3 className="mb-4 text-2xl font-bold text-[#702DFF]">Web3 Development Training</h3>
+                <div className="mb-6">
+                  <h4 className="mb-2 font-semibold">Course Details:</h4>
+                  <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
+                    <p className="mb-4 text-muted-foreground">
+                      <strong>Professional Web3 Development Program</strong><br />
+                      An intensive course covering blockchain technology, smart contract development, and decentralized application architecture. Designed for developers and technical teams entering the Web3 space.
+                    </p>
+                    <p className="text-muted-foreground">
+                      Participants will build real decentralized applications and smart contracts, gaining practical experience with current Web3 technologies and best practices.
+                    </p>
+                    <p className="mt-4 text-muted-foreground">
+                      <strong>Course Modules:</strong>
+                      <ul className="mt-2 space-y-1">
+                        <li>• Blockchain Technology Fundamentals</li>
+                        <li>• Smart Contract Development with Solidity</li>
+                        <li>• DApp Architecture and Development</li>
+                        <li>• Web3.js and Ethers.js Integration</li>
+                        <li>• Security Best Practices</li>
+                      </ul>
+                    </p>
+                    <p className="mt-4 text-muted-foreground">
+                      <strong>Duration:</strong> 10 weeks (6 hours/week)<br />
+                      <strong>Format:</strong> Online live sessions + Project-based learning<br />
+                      <strong>Prerequisites:</strong> JavaScript programming experience
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {activePopup === 'ai-web3-integration' && (
+              <>
+                <h3 className="mb-4 text-2xl font-bold text-[#08D9D6]">AI-Web3 Integration Training</h3>
+                <div className="mb-6">
+                  <h4 className="mb-2 font-semibold">Course Details:</h4>
+                  <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
+                    <p className="mb-4 text-muted-foreground">
+                      <strong>Advanced Integration Course</strong><br />
+                      A cutting-edge program teaching the integration of AI and blockchain technologies. Learn to build intelligent decentralized systems that combine the power of AI with the security and transparency of blockchain.
+                    </p>
+                    <p className="text-muted-foreground">
+                      This advanced course covers the latest techniques for creating AI-powered smart contracts, decentralized AI models, and blockchain-based machine learning systems.
+                    </p>
+                    <p className="mt-4 text-muted-foreground">
+                      <strong>Course Modules:</strong>
+                      <ul className="mt-2 space-y-1">
+                        <li>• AI Models in Blockchain Environments</li>
+                        <li>• Decentralized AI Training and Inference</li>
+                        <li>• Smart Oracle Development and Integration</li>
+                        <li>• Privacy-Preserving AI on Blockchain</li>
+                        <li>• Advanced System Architecture Patterns</li>
+                      </ul>
+                    </p>
+                    <p className="mt-4 text-muted-foreground">
+                      <strong>Duration:</strong> 12 weeks (8 hours/week)<br />
+                      <strong>Format:</strong> Online live sessions + Advanced projects<br />
+                      <strong>Prerequisites:</strong> AI Fundamentals and Web3 Development courses or equivalent experience
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* Other existing popups */}
+            {activePopup === 'ai-native' && (
+              <>
+                <h3 className="mb-4 text-2xl font-bold text-[#FF2E63]">Smart Business Solutions</h3>
+                <div className="mb-6">
+                  <h4 className="mb-2 font-semibold">How It Works:</h4>
+                  <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
+                    <p className="mb-4 text-muted-foreground">
+                      <strong>Example: A Smart Restaurant Helper</strong><br />
+                      Imagine a system that helps a restaurant run smoothly. It learns when the busy hours are, how much food to order, and how many staff members are needed each day. Just like a helpful manager who gets better at their job over time!
+                    </p>
+                    <p className="text-muted-foreground">
+                      The system notices patterns - like how you get more customers on rainy days when people don't want to cook, or how certain dishes are more popular during different seasons. It uses this information to help you prepare better.
+                    </p>
+                    <p className="mt-4 text-muted-foreground">
+                      <strong>Benefits You'll See:</strong>
+                      <ul className="mt-2 space-y-1">
+                        <li>• Less food waste because you'll know exactly what to order</li>
+                        <li>• Happy customers because you're always prepared</li>
+                        <li>• Lower costs through better staff scheduling</li>
+                        <li>• More time to focus on growing your business</li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+            
+            <div className="flex justify-end">
+              <Button onClick={closePopup} className="bg-[#FF2E63] text-white hover:bg-[#FF2E63]/90">
+                Close
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 } 
