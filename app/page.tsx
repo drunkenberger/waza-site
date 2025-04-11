@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { CheckCircle, Code, Zap, Sparkles, Brain, Rocket, Clock, Shield, Users, ChevronRight, Menu } from "lucide-react"
+import { CheckCircle, Code, Zap, Sparkles, Brain, Rocket, Clock, Shield, Users, ChevronRight, Menu, ChevronDown } from "lucide-react"
 import { Footer } from "./components/ui/footer"
 import HeroMedia from "./components/HeroMedia"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -15,6 +15,13 @@ import { VHSEffect } from "@/components/VHSEffect"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById('features')
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-b from-background to-background/50 dark:from-background dark:to-background/50">
@@ -165,6 +172,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+            {/* Add scroll down arrow */}
+            <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce mt-12">
+              <ChevronDown 
+                className="h-12 w-12 text-white/50 hover:text-white transition-colors duration-200"
+                onClick={scrollToNextSection}
+              />
             </div>
           </VHSEffect>
           {/* Section transition */}
